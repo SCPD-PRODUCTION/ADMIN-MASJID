@@ -12,8 +12,8 @@ app.use(cors()); // ✅ Izinkan akses dari browser (dashboard admin)
 app.use(express.json({ limit: "10mb" })); // Biar bisa upload gambar base64
 
 // Info repo
-const GITHUB_REPO = "SCPD-PRODUCTION/web-utama";
-const FILE_PATH = "produk.json";
+const GITHUB_REPO = "SCPD-PRODUCTION/MASJID JAMI BAITURRAHMAN";
+const FILE_PATH = "data.json";
 const GITHUB_API = `https://api.github.com/repos/${GITHUB_REPO}/contents/${FILE_PATH}`;
 const TOKEN = process.env.GITHUB_TOKEN;
 
@@ -91,7 +91,7 @@ app.post("/add-product", async (req, res) => {
 });
 
 // Jalankan server
-const PORT = 3000;
+const PORT = 6000;
 app.listen(PORT, () => {
   console.log(`🚀 Server SCPD Admin berjalan di http://localhost:${PORT}`);
 });
