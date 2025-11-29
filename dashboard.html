@@ -20,7 +20,7 @@
 
   <aside id="sidebar" class="sidebar">
     <ul>
-      <li><a href="#" id="addProductBtn">Tambah Produk</a></li>
+      <li><a href="#" id="addProductBtn">Tambah banner</a></li>
       <li><a href="#" id="viewProductsBtn">Daftar Produk</a></li>
       <li><a href="#" id="analyticsBtn">Data Analitik Produk</a></li>
       <li><a href="#" id="activityBtn">Aktivitas Admin</a></li>
@@ -30,8 +30,13 @@
   </aside>
 
   <main class="main-content">
-    <button id="centerAddProduct" class="center-add-btn">+ Tambah Produk</button>
+    <button id="centerAddProduct" class="center-add-btn">+ Tambah Banner</button>
     <button id="centerViewProducts" class="center-add-btn">Lihat Daftar Produk</button>
+    <button id="centerAddProduct" class="center-add-btn">+ Tambah Runteks</button>
+    <button id="centerAddProduct" class="center-add-btn">+ Tambah Kajian</button>
+    <button id="centerAddProduct" class="center-add-btn">+ Tambah Media</button>
+    <button id="centerAddProduct" class="center-add-btn">+ Tambah Profil</button>
+
 
     <div class="produk-slider-container">
       <button class="slider-btn prevBtn">&#8592;</button>
@@ -42,13 +47,62 @@
     </div>
   </main>
 
-  <!-- Modal Tambah Produk -->
+  <!-- Modal Tambah banner -->
   <div id="productModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
-      <h2>Tambah Produk</h2>
+      <h2>Tambah Banner</h2>
       <form id="productForm">
-        <label for="productTitle">Judul Produk</label>
+        <label for="productTitle">Judul Banner</label>
+        <input type="text" id="productTitle" required>
+
+        <label for="productDesc">Deskripsi</label>
+        <textarea id="productDesc" required></textarea>
+
+        <label for="productImg">Upload Foto</label>
+        <input type="file" id="productImg" accept="image/*" required>
+
+        <img id="previewImg" src="" alt="Preview Foto" style="max-width:150px; display:none; margin-bottom:10px; border-radius:5px;">
+
+        <button type="submit">Simpan Produk</button>
+
+  <!-- Modal Tambah Runteks -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Tambah Runteks</h2>
+      <form id="productForm">
+        <label for="productTitle">isi runteks</label>
+        <input type="text" id="productTitle" required>
+
+        <button type="submit">Simpan Produk</button>
+
+  <!-- Modal Tambah Kajian -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Tambah Kajian</h2>
+      <form id="productForm">
+        <label for="productTitle">Judul Kajian</label>
+        <input type="text" id="productTitle" required>
+
+        <label for="productDesc">Deskripsi</label>
+        <textarea id="productDesc" required></textarea>
+
+        <label for="productImg">Upload Foto</label>
+        <input type="file" id="productImg" accept="image/*" required>
+
+        <img id="previewImg" src="" alt="Preview Foto" style="max-width:150px; display:none; margin-bottom:10px; border-radius:5px;">
+
+        <button type="submit">Simpan Produk</button>
+
+  <!-- Modal Tambah Profil -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Tambah Profil</h2>
+      <form id="productForm">
+        <label for="productTitle">Nama</label>
         <input type="text" id="productTitle" required>
 
         <label for="productDesc">Deskripsi</label>
