@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCPD Dashboard</title>
+  
+<!-- Fav icon -->
+    <link rel="shortcut icon" href="./assets/gold.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="dashboard.css" />
+  <script type="module" src="dashboard.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon" id="menuToggle">☰</div>
+    <h1 id="dashboardTitle" class="neon-text">DASHBOARD</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="#" id="addProductBtn">Tambah Produk</a></li>
+      <li><a href="#" id="viewProductsBtn">Daftar Produk</a></li>
+      <li><a href="#" id="analyticsBtn">Data Analitik Produk</a></li>
+      <li><a href="#" id="activityBtn">Aktivitas Admin</a></li>
+      <li><a href="#" id="favoriteBtn">Produk Favorit</a></li>
+      <li><a href="dashboard.html" id="dashboardBtn">Dashboard</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <button id="centerAddProduct" class="center-add-btn">+ Tambah Produk</button>
+    <button id="centerViewProducts" class="center-add-btn">Lihat Daftar Produk</button>
+
+    <div class="produk-slider-container">
+      <button class="slider-btn prevBtn">&#8592;</button>
+      
+      <div class="produk-container horizontal-scroll"></div>
+
+      <button class="slider-btn nextBtn">&#8594;</button>
+    </div>
+  </main>
+
+  <!-- Modal Tambah Produk -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Tambah Produk</h2>
+      <form id="productForm">
+        <label for="productTitle">Judul Produk</label>
+        <input type="text" id="productTitle" required>
+
+        <label for="productDesc">Deskripsi</label>
+        <textarea id="productDesc" required></textarea>
+
+        <label for="productPrice">Harga</label>
+        <input type="number" id="productPrice" required>
+
+        <label for="productImg">Upload Foto</label>
+        <input type="file" id="productImg" accept="image/*" required>
+
+        <img id="previewImg" src="" alt="Preview Foto" style="max-width:150px; display:none; margin-bottom:10px; border-radius:5px;">
+
+        <button type="submit">Simpan Produk</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

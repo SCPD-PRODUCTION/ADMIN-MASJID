@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin SCPD</title>
+
+<!-- Fav Icon  -->
+    <link rel="shortcut icon" href="./assets/scpd.png" type="image/x-icon">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-container">
+    <h1 class="title blink">SCPD ADMIN</h1>
+    <button id="googleLoginBtn" class="btn">Login dengan Google</button>
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="firebase.js"></script>
+<script>
+document.getElementById('googleLoginBtn').addEventListener('click', () => {
+    loginWithGoogle();
+});
+</script>
+</body>
+</html>
